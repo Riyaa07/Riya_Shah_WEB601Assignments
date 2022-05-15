@@ -1,3 +1,6 @@
+My name is Riya Shah
+The theme of my angular cli is Food as I am a foodblogger and loves to explore different kinds of cusinie and local
+food. The name of food, ingridents , images ,reviews are the part of it.
 # RShahFood
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
