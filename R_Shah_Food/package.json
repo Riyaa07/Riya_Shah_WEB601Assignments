@@ -9,7 +9,7 @@
     "test": "ng test",
     "generateinterface": "ng generate interface",
     "generateclass": "ng generate class",
-    "generatecomponent": "ng generate component;"
+    "generatecomponent": "ng generate component"
   },
   "private": true,
   "dependencies": {
