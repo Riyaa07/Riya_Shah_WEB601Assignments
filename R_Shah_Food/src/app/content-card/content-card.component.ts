@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Content } from '../models/content';
 
 @Component({
   selector: 'app-content-card',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentCardComponent implements OnInit {
 
+  @Input() FoodItem?: Content;
+  
   constructor() { }
 
   ngOnInit(): void {
+    // if(this.FoodItem){
+    //   console.log(this.FoodItem.id);
+    //   console.log(this.FoodItem.title);
+    //   console.log(this.FoodItem.name);
+    //   console.log(this.FoodItem.body);
+    // }
   }
 
 }
+
+
