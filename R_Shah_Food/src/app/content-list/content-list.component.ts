@@ -13,6 +13,7 @@ export class ContentListComponent implements OnInit {
 
   // ngOnInit(): void {
   // }
+ 
   FoodItem: Content[];
 
   constructor() {

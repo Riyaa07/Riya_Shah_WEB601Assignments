@@ -8,17 +8,15 @@ import { Content } from '../models/content';
 })
 export class ContentCardComponent implements OnInit {
 
+  clickImage(){
+    console.log(`The id is ${this.FoodItem?.id} and author is ${this.FoodItem?.author}`)
+  }
   @Input() FoodItem?: Content;
   
   constructor() { }
 
   ngOnInit(): void {
-    // if(this.FoodItem){
-    //   console.log(this.FoodItem.id);
-    //   console.log(this.FoodItem.title);
-    //   console.log(this.FoodItem.name);
-    //   console.log(this.FoodItem.body);
-    // }
+    
   }
 
 }

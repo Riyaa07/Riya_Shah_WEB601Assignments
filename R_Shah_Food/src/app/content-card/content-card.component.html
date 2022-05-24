@@ -1,7 +1,8 @@
 
-<div>
+<div class="display">
    <h1>{{FoodItem?.name}}</h1>
-   <img [src]="FoodItem?.imageLink" alt="">
+   <header>{{FoodItem?.title}}</header>
+   <img [src]="FoodItem?.imageLink" (click)="clickImage()" alt="">
    <h3>{{FoodItem?.type}}</h3>
    <p>{{FoodItem?.body}}</p>
    <h5>{{FoodItem?.author}}</h5>
