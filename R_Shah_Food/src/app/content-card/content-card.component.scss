@@ -1,3 +1,12 @@
+:host{
+  display: block;
+  &.even {
+    background-color: rgb(184, 182, 182);
+   }
+   &.odd{
+   background-color: white;
+   }
+}
 .display{
   display:block;
   border: 2px inset rgb(244, 117, 117);
@@ -9,6 +18,8 @@ h1{
   color: rgb(55, 78, 213);
   text-align: center;
 }
+
+
 
 header{
   text-align: center;
