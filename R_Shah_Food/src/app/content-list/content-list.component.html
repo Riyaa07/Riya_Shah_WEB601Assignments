@@ -1,5 +1,53 @@
-<div>
+<!-- <div>
 	<app-content-card *ngFor="let item of FoodItem;index as i; first as isFirst; odd as odd; even as even;" [FoodItem]="item"  class="Food-{{i-1}}"  [class.odd]="odd" [class.even]="even" ></app-content-card>
-</div>
+</div> -->
 
 <!-- <h2>{{this.FoodItem}}</h2> -->
+
+<div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type==='Icecreams'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+</div>
+
+<div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type===''" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+ </div>
+
+ <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type==='Sabji'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+ </div>
+
+ <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type==='Cakes'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+ </div>
+
+ <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type==='Indo-Chinese'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+ </div>
+
+ <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type==='Mexican'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+ </div>
+
+ <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type==='Chinese'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+ </div>
+
+ <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card *ngIf="item.type==='Icecream'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+
+ </div>
