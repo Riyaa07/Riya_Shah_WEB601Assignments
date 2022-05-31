@@ -1,0 +1,5 @@
+<div>
+	<app-content-card *ngFor="let item of FoodItem;index as i; first as isFirst; odd as odd; even as even;" [FoodItem]="item"  class="Food-{{i-1}}"  [class.odd]="odd" [class.even]="even" ></app-content-card>
+</div>
+
+<!-- <h2>{{this.FoodItem}}</h2> -->

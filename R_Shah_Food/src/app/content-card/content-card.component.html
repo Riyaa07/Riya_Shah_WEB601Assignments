@@ -1,0 +1,10 @@
+
+<div class="display">
+   <h1>{{FoodItem?.name}}</h1>
+   <header>{{FoodItem?.title}}</header>
+   <img [src]="FoodItem?.imageLink" (click)="clickImage()" alt="">
+   <h3>{{FoodItem?.type}}</h3>
+   <p>{{FoodItem?.body}}</p>
+   <h5>{{FoodItem?.author}}</h5>
+   <h5>{{FoodItem?.hashtags}}</h5>
+</div>
