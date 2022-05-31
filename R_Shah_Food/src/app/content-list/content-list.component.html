@@ -3,51 +3,35 @@
 </div> -->
 
 <!-- <h2>{{this.FoodItem}}</h2> -->
+<br>
+<div>
+	<label for="input">Enter the name of Author:</label> 
+	<input id="input" type="text"> &nbsp;
+	<button>Display</button>
+</div>
 
+<br>
+
+<h1>Type of Desserts</h1>
 <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
 
-    <app-content-card *ngIf="item.type==='Icecreams'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+    <app-content-card *ngIf="item.type==='Desserts'" [FoodItem]="item" class="Food-{{i-1}}" class="desserts"></app-content-card>
 
 </div>
 
+<h1 >No Type</h1>
 <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
 
-    <app-content-card *ngIf="item.type===''" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+    <app-content-card *ngIf="item.type===''" [FoodItem]="item" class="Food-{{i-1}}" class="no"></app-content-card>
 
  </div>
+
+<h1>Type of Chinese</h1>
 
  <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
 
-    <app-content-card *ngIf="item.type==='Sabji'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
+    <app-content-card *ngIf="item.type==='Chinese'" [FoodItem]="item" class="Food-{{i-1}}" class="chinese"></app-content-card>
 
  </div>
 
- <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
-
-    <app-content-card *ngIf="item.type==='Cakes'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
-
- </div>
-
- <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
-
-    <app-content-card *ngIf="item.type==='Indo-Chinese'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
-
- </div>
-
- <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
-
-    <app-content-card *ngIf="item.type==='Mexican'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
-
- </div>
-
- <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
-
-    <app-content-card *ngIf="item.type==='Chinese'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
-
- </div>
-
- <div *ngFor="let item of (FoodItem | cuisine); index as i; first as isFirst; odd as odd; even as even;" >
-
-    <app-content-card *ngIf="item.type==='Icecream'" [FoodItem]="item" class="Food-{{i-1}}"></app-content-card>
-
- </div>
+ 

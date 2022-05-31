@@ -1,5 +1,7 @@
 :host{
   display: block;
+  width: 850px;
+  margin: 8px auto;
   &.even {
     background-color: rgb(184, 182, 182);
    }
@@ -10,6 +12,8 @@
 .display{
   display:block;
   border: 2px inset rgb(244, 117, 117);
+  padding:10px;
+ 
 }
 
 h1{
@@ -28,7 +32,8 @@ header{
 
 img{
   height: 700px;
-  width:700px;
+  width:100%;
+  border-radius: 50px;
   object-fit: fill;
   align-items: center;
   display: block;
@@ -48,3 +53,5 @@ p{
 h5{
   text-align: center;
 }
+
+
