@@ -15,6 +15,7 @@ export class ContentListComponent implements OnInit {
   // }
  
   FoodItem: Content[];
+  
 
   constructor() {
 
@@ -95,6 +96,26 @@ export class ContentListComponent implements OnInit {
   }
   ngOnInit(): void {
     }
+
+  output = "";
+  display(areaMessage:string)
+  {
+    let authorName = <HTMLInputElement>document.getElementById('area');
+    this.FoodItem.forEach(i => {
+      if(i.author == areaMessage)
+      {
+        this.output = `The Food Item of Author ${areaMessage} exists`
+        authorName.style.color = "blue";
+        return  this.output; 
+      }
+      else
+      {
+        this.output = `The Food Item of Author ${areaMessage} dosen't exists`;
+        authorName.style.color = "grey";
+        return  this.output; 
+      }
+    })
+  }
 }
 
 
