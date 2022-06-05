@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 4px inset rgb(210, 34, 63);
+}
+
+:host {
+    .desserts{
+        background-color: #FCF6F5;
+        color:rgb(232, 130, 130);
+    }
+
+    .no{
+        background-color: rgb(224, 150, 130);
+    }
+
+    .chinese{
+        background-color: #faf2f4;
+        color:#f40743
+    }
+};
+
+#area{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:600px;
+    height:30px;
+}
