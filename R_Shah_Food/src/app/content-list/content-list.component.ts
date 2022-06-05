@@ -70,7 +70,7 @@ export class ContentListComponent implements OnInit {
       title: 'Hocco',
       body: 'It is mix vegetable',
       author: 'Riya Shah',
-      imageLink: 'https://pipingpotcurry.com/wp-content/uploads/2018/09/Pav-Bhaji-500x500.jpg',
+      // imageLink: 'https://pipingpotcurry.com/wp-content/uploads/2018/09/Pav-Bhaji-500x500.jpg',
       type: '',
       hashtags:['vegetable']
     },{

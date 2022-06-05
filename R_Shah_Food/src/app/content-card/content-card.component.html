@@ -2,7 +2,16 @@
 <div class="display">
    <h1>{{FoodItem?.name}}</h1>
    <header>{{FoodItem?.title}}</header>
-   <img [src]="FoodItem?.imageLink" (click)="clickImage()" alt="">
+   <!-- <img [src]="FoodItem?.imageLink" (click)="clickImage()" alt=""> -->
+
+   <img *ngIf="FoodItem && FoodItem.imageLink; else elseBlockNameIsWhateverYouWant" [src]="FoodItem?.imageLink" (click)="clickImage()" alt="">
+
+<ng-template #elseBlockNameIsWhateverYouWant>
+  <!-- <p class="not-found">No body content found</p> -->
+  <img [src] = " 'https://cdn4.vectorstock.com/i/1000x1000/18/83/food-logo-designs-with-spoon-and-fork-vector-24431883.jpg '">
+</ng-template>
+
+
    <h3>{{FoodItem?.type}}</h3>
    <p>{{FoodItem?.body}}</p>
    <h5>{{FoodItem?.author}}</h5>
