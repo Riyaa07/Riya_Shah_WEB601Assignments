@@ -1,7 +1,7 @@
 
 <div class="display">
    <h1>{{FoodItem?.name}}</h1>
-   <header>{{FoodItem?.title}}</header>
+   <header appHighLightImportantData>{{FoodItem?.title}}</header>
    <!-- <img [src]="FoodItem?.imageLink" (click)="clickImage()" alt=""> -->
 
    <img *ngIf="FoodItem && FoodItem.imageLink; else elseBlockNameIsWhateverYouWant" [src]="FoodItem?.imageLink" (click)="clickImage()" alt="">
@@ -12,8 +12,8 @@
 </ng-template>
 
 
-   <h3>{{FoodItem?.type}}</h3>
+   <h3 appHighLightImportantData>{{FoodItem?.type}}</h3>
    <p>{{FoodItem?.body}}</p>
    <h5>{{FoodItem?.author}}</h5>
-   <h5>{{FoodItem?.hashtags}}</h5>
+   <h5 appHighLightImportantData>{{FoodItem?.hashtags}}</h5>
 </div>
