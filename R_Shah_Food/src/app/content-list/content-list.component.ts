@@ -15,9 +15,11 @@ export class ContentListComponent implements OnInit {
   // }
  
   FoodItem: Content[];
-  
+ 
 
   constructor() {
+
+    
 
     this.FoodItem = [{
       id:0,

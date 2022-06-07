@@ -11,10 +11,13 @@ export class ContentCardComponent implements OnInit {
   clickImage(){
     console.log(`The id is ${this.FoodItem?.id} and author is ${this.FoodItem?.author}`)
   }
-  @Input() FoodItem?: Content;
   
-  constructor() { }
-
+  @Input() FoodItem?: Content;
+  showImage: boolean;
+  constructor() { 
+    this.showImage = false;
+  }
+  
   ngOnInit(): void {
     
   }

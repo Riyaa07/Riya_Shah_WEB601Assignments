@@ -1,7 +1,7 @@
 
 <div class="display">
    <h1>{{FoodItem?.name}}</h1>
-   <header appHighLightImportantData>{{FoodItem?.title}}</header>
+   <header appHighLightImportantData (mouseover)="showImage=true" (mouseout)="showImage=false">{{FoodItem?.title}}</header>
    <!-- <img [src]="FoodItem?.imageLink" (click)="clickImage()" alt=""> -->
 
    <img *ngIf="FoodItem && FoodItem.imageLink; else elseBlockNameIsWhateverYouWant" [src]="FoodItem?.imageLink" (click)="clickImage()" alt="">
