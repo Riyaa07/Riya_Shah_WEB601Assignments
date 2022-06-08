@@ -7,6 +7,7 @@ import { Content } from '../models/content';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
+  // variableColour: string = "maroon";
 
   clickImage(){
     console.log(`The id is ${this.FoodItem?.id} and author is ${this.FoodItem?.author}`)
