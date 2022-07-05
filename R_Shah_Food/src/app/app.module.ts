@@ -7,6 +7,8 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { CuisinePipe } from './cuisine.pipe';
 import { HighLightImportantDataDirective } from './high-light-important-data.directive';
 import { FoodListComponent } from './food-list/food-list.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { FoodListComponent } from './food-list/food-list.component';
     ContentCardComponent,
     CuisinePipe,
     HighLightImportantDataDirective,
-    FoodListComponent
+    FoodListComponent,
+    ContentDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
