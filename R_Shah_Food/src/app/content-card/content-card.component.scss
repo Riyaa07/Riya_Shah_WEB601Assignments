@@ -8,6 +8,10 @@
    &.odd{
    background-color: white;
    }
+   
+  &.single-item-on-app-component {
+    box-shadow: 4px 10px 20px red;
+  }
 }
 .display{
   display:block;

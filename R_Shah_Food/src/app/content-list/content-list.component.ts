@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{Content} from '../models/content'
+import { FoodService } from '../services/food.service';
 
 
 @Component({
@@ -9,6 +10,7 @@ import{Content} from '../models/content'
 })
 export class ContentListComponent implements OnInit {
   
+  
 
   // constructor() { }
 
@@ -16,16 +18,29 @@ export class ContentListComponent implements OnInit {
   // }
  
   FoodItem: Content[];
- 
+  // FoodItemList : Content[];
 
-  constructor() {
+  newContentItem: Content = {
+    id: 1,
+    author: 'Riya',
+    imageLink: '',
+    title: 'Restuarant',
+    type: 'food',
+    name: ''
+  }
 
-    
-
+  constructor(private FoodService: FoodService) {
+  
     this.FoodItem = [];
 
+    // this. FoodIte = [];
+
   }
+
+  
   ngOnInit(): void {
+    this.FoodService.getContent().subscribe(FoodServiceArray =>
+      this.FoodItem = FoodServiceArray);
     }
 
   output = "";

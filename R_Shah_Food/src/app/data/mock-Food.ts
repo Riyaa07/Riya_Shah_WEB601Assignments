@@ -1,5 +1,12 @@
 import { Content } from "../models/content";
 
+export const DEFAULTFoodItem: Content = {
+  id: -1,
+  title: 'NOT FOUND',
+  author: "NOT VALID",
+  name: "",
+  type: ""
+}
 
 export const FoodItem: Content[] = [{
     id:0,
