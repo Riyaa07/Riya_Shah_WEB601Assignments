@@ -1,1 +1,11 @@
-<p>food-list works!</p>
+<div class="food-search">
+    <label>
+      Food Search:
+      <input type="number" autofocus #idNumber>
+    </label>
+    <br>
+    <button (click)="checkForIdInList(idNumber.value)">Check for Food at id</button>
+  </div>
+  <app-content-card [FoodItem]="individualFood" class="single-item-on-app-component"></app-content-card>
+  
+  <!-- <app-content-list></app-content-list> -->
