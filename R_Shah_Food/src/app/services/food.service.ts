@@ -21,14 +21,18 @@ export class FoodService {
 
   // number id
   //bcz of ts2322 removed [] from content
+  // getContentItem(id: number): Observable<Content> {
+  //   for (var i = 0; i < FoodItem.length; i++) // iterate through each chess champion
+  //   {
+  //     if (FoodItem[i].id === id) { // found the item
+  //       return of(FoodItem[i]);
+  //     }
+  //   }
+  //   return of(DEFAULTFoodItem); // need to return something if the content isn't there
+  // }
+
   getContentItem(id: number): Observable<Content> {
-    for (var i = 0; i < FoodItem.length; i++) // iterate through each chess champion
-    {
-      if (FoodItem[i].id === id) { // found the item
-        return of(FoodItem[i]);
-      }
-    }
-    return of(DEFAULTFoodItem); // need to return something if the content isn't there
+    return of(FoodItem[id]);
   }
 
   //create

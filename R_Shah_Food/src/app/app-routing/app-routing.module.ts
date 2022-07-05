@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentListComponent} from '../content-list/content-list.component';
-import { ContentCardComponent } from '../content-card/content-card.component';
+import { ContentDetailComponent } from '../content-detail/content-detail.component';
+import { FoodListComponent } from '../food-list/food-list.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,13 @@ const routes: Routes = [
   },
   {
     path: "detail/:id",
-    component: ContentListComponent,
-  }
+    component: ContentDetailComponent,
+  },
+  {
+    path:"search",
+    component: FoodListComponent,
+  },
+  
 
 ];
 
