@@ -9,6 +9,7 @@ import { HighLightImportantDataDirective } from './high-light-important-data.dir
 import { FoodListComponent } from './food-list/food-list.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { InvalidComponent } from './invalid/invalid.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
     CuisinePipe,
     HighLightImportantDataDirective,
     FoodListComponent,
-    ContentDetailComponent
+    ContentDetailComponent,
+    InvalidComponent
   ],
   imports: [
     BrowserModule,

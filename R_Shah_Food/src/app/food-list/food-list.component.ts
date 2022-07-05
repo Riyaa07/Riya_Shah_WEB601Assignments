@@ -11,8 +11,10 @@ import { DEFAULTFoodItem } from '../data/mock-Food';
 export class FoodListComponent implements OnInit {
   individualFood: Content = DEFAULTFoodItem;
 
-  constructor(private FoodService: FoodService) {
 
+
+  constructor(private FoodService: FoodService) {
+   
   }
 
   ngOnInit(): void {
@@ -23,6 +25,7 @@ export class FoodListComponent implements OnInit {
     });
 
   }
+
 
   
   checkForIdInList(idValue: string): void {

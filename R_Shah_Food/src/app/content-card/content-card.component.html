@@ -1,7 +1,7 @@
 
 <div class="display">
    <h1>{{FoodItem?.name}}</h1>
-   <header appHighLightImportantData [backcolour]="FoodItem?.title == 'GM'  ? 'white': 'black'">{{FoodItem?.title}}</header>
+   <header appHighLightImportantData [backcolour]="FoodItem?.title == 'GM'  ? 'white': 'black'"> <a [routerLink]="['/detail', FoodItem?.id ?? 0]"> {{FoodItem?.title}} </a></header>
    <!-- <img [src]="FoodItem?.imageLink" (click)="clickImage()" alt=""> -->
 
    <img *ngIf="FoodItem && FoodItem.imageLink; else elseBlockNameIsWhateverYouWant" [src]="FoodItem?.imageLink" (click)="clickImage()" alt="">
@@ -13,7 +13,7 @@
 
 
    <h3 appHighLightImportantData (mouseover)="showImage=true" (mouseout)="showImage=false" [bb]="'2px solid red'">{{FoodItem?.type}}</h3>
-   <p>{{FoodItem?.body}}</p>
-   <h5>{{FoodItem?.author}}</h5>
+   <!-- <p>{{FoodItem?.body}}</p> -->
+   <!-- <h5>{{FoodItem?.author}}</h5> -->
    <h5 appHighLightImportantData (mouseover)="showImage=true" (mouseout)="showImage=false" [colour]="'#fb4570'">{{FoodItem?.hashtags}}</h5>
 </div>
