@@ -27,14 +27,16 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentDetailComponent,
     InvalidComponent,
     NavBarComponent,
-    InMemoryDataService
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,96 +1,52 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { FoodItem , DEFAULTFoodItem} from '../data/mock-Food';
 import { Content } from '../models/content';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
+
+  private httpOptions = {
+    headers: new HttpHeaders({
+      'Content-type':
+        'application/json'
+    })
+  };
   FoodItem: any;
 
-  constructor() { }
+  
+  constructor(private http: HttpClient) { }
 
   //return
   getContent(): Observable<Content[]> {
-    return of(FoodItem);
+    return this.http.get<Content[]>("/api/fooo");
   }
 
 
-  //read
-
-  // number id
-  //bcz of ts2322 removed [] from content
-  // getContentItem(id: number): Observable<Content> {
-  //   for (var i = 0; i < FoodItem.length; i++) // iterate through each chess champion
-  //   {
-  //     if (FoodItem[i].id === id) { // found the item
-  //       return of(FoodItem[i]);
-  //     }
-  //   }
-  //   return of(DEFAULTFoodItem); // need to return something if the content isn't there
-  // }
+  addContentItem(newContent: Content): Observable<Content> {
+    return this.http.post<Content>("/api/fooo", newContent, this.httpOptions)
+  }
 
   getContentItem(id: number): Observable<Content> {
-    return of(FoodItem[id]);
+    console.log("Now getting it from the server!");
+    return this.http.get<Content>("/api/fooo/" + id);
   }
 
-  //create
-  
-  //array and return it
-  addContentItem(newContentItem: Content): Observable<Content[]> {
-    // if there aren't some chess champions with the same id number, push the array item
-    if (!FoodItem.some(FoodItem => FoodItem.id === newContentItem.id)) {
-      FoodItem.push(newContentItem);
-    }
-    return of(FoodItem);
-  }
-
-  
-
-  //updating
-
-  updateContentItem(newContentItem: Content): Observable<Content[]> {
-    // find item in FoodItem with same id as newcontentitem's id
-    // update the values of that item in the array with the values of the newContentItem
-    // return the array after updating
-
-    FoodItem.forEach((individualFoodItem, index) => {
-      // one potential solution
-      // if (individualChessChampion.id === newContentItem.id) // found them
-      // {
-      //   individualChessChampion.title = newContentItem.title;
-      //   individualChessChampion.body = newContentItem.body;
-      //   individualChessChampion.author = newContentItem.author;
-      //   individualChessChampion.imageLink = newContentItem.imageLink;
-      //   individualChessChampion.type = newContentItem.type;
-      //   individualChessChampion.hashtags = newContentItem.hashtags;
-      //   // return;
-      // }
-
-      if (individualFoodItem.id === newContentItem.id) // found them
-      {
-        console.log("Trying method 2");
-        FoodItem[index] = newContentItem;
-        // return;
-      }
-    });
-
-    return of(FoodItem);
+  updateContent(contentItem: Content): Observable<any> {
+    return this.http.put<any>("api/fooo", contentItem, this.httpOptions);
   }
   
 
-  deleteContentItem(id: number): Observable<Content> {
-
-    for (var i = 0; i < FoodItem.length; i++) // iterate through each chess champion
-    {
-      if (FoodItem[i].id === id) { // found the item
-        // delete it from the array first
-        FoodItem.splice(i, 1);
-        console.log("Deleted the item: ", FoodItem);
-        return of(FoodItem[i]);
-      }
-    }
-    return of(DEFAULTFoodItem); // need to return something if the content isn't there
-  }
+ // D
+ deleteContentItem(newContent: Content): Observable<undefined> {
+  // display that it's processing
+  // delete the item
+  return of(); // send back observable so the component can subscribe to it and know it worked
 }
+
+}
+  
+
+ 
