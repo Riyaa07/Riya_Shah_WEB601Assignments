@@ -15,6 +15,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
     ContentDetailComponent,
     InvalidComponent,
     NavBarComponent,
+    ChangeContentComponent,
   ],
   imports: [
     BrowserModule,
