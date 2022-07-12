@@ -10,6 +10,11 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
 import { InvalidComponent } from './invalid/invalid.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./services/in-memory-data.service";
 
 @NgModule({
   declarations: [
@@ -20,12 +25,16 @@ import { InvalidComponent } from './invalid/invalid.component';
     HighLightImportantDataDirective,
     FoodListComponent,
     ContentDetailComponent,
-    InvalidComponent
+    InvalidComponent,
+    NavBarComponent,
+    InMemoryDataService
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
