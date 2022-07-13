@@ -18,4 +18,6 @@
   <h5 >{{FoodItem?.hashtags}}</h5>
 
   <a routerLink="/list/">Back to the content list</a>
+  <br><br>
+  <a [routerLink]="['/updateContent', FoodItem?.id ?? 0]"> Update Content </a>
 </div>
