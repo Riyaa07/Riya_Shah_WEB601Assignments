@@ -1,5 +1,5 @@
 export interface Content {
-    readonly id: number | null;
+ id: number | null;
   name: string;
   title: string;
   body?: string;

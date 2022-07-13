@@ -9,6 +9,7 @@ import { FoodService } from '../services/food.service';
 })
 export class ChangeContentComponent implements OnInit {
 
+  
   FoodItem: Content = {
     name: "",
     body: "",
@@ -17,6 +18,8 @@ export class ChangeContentComponent implements OnInit {
     author: '',
     type: ''
   };
+
+  isShown: boolean = false ;
   tempTags: string = '';
   constructor(private FoodService: FoodService) { }
 
@@ -31,11 +34,13 @@ export class ChangeContentComponent implements OnInit {
       );
   }
   updateContentOnServer(): void {
+    this.isShown = true ;
     this.FoodItem.hashtags = this.tempTags.split(", ");
     this.FoodService.updateContent(this.FoodItem)
       .subscribe(() =>
         console.log("Content updated successfully", this.FoodItem)
-      );
+       );
+       this.isShown != this.isShown;
   }
 
 }

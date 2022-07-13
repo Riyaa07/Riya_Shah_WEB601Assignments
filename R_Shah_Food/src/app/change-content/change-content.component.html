@@ -1,4 +1,8 @@
 <label>
+  ID (for updating):
+  <input *ngIf="isShown" type="number" [(ngModel)]="FoodItem.id">
+</label>
+<label>
     Name:
     <input [(ngModel)]="FoodItem.name">
   </label>
