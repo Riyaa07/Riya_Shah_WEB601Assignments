@@ -1,1 +1,31 @@
-<p>change-content works!</p>
+<label>
+    Name:
+    <input [(ngModel)]="FoodItem.name">
+  </label>
+  <label>
+    Title:
+    <input [(ngModel)]="FoodItem.title">
+  </label>
+  <label>
+    Type:
+    <input [(ngModel)]="FoodItem.type">
+  </label>
+  <label>
+    Author:
+    <input [(ngModel)]="FoodItem.author">
+  </label>
+  <label>
+    Image URL:
+    <input [(ngModel)]="FoodItem.imageLink">
+  </label>
+  <label>
+    Body:
+    <textarea [(ngModel)]="FoodItem.body"></textarea>
+  </label>
+  <label>
+    Tags:
+    <input [(ngModel)]="tempTags">
+  </label>
+  <button (click)="+(FoodItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() " >
+    Add new content
+  </button>
