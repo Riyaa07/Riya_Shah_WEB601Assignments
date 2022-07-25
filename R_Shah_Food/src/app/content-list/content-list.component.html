@@ -5,11 +5,9 @@
 <!-- <h2>{{this.FoodItem}}</h2> -->
 <br>
 <div>
-	<mat-form-field color="primary" appearance="fill">
-		<input  #input placeholder="Enter the Name of Author"> &#160;
-	</mat-form-field>
-		<button mat-raised-button color="primary" (click)="display(input.value)">{{'Search for Author'}}</button>
 	
+	<input  #input placeholder="Enter the Name of Author"> &#160;
+	<button  (click)="display(input.value)">{{'Search for Author'}}</button>
 
 	<br><br>
 	<input id="area" #input value="{{output}}">

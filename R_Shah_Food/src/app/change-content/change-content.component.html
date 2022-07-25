@@ -1,39 +1,39 @@
 <mat-form-field color="primary" appearance="fill">
-  <mat-label for="id">ID (for updating)</mat-label>
+  <mat-label>ID (for updating)</mat-label>
   <input matInput *ngIf="isShown" type="number" [(ngModel)]="FoodItem.id">
 </mat-form-field>
 
 <mat-form-field color="primary" appearance="fill">
-  <mat-label for="name">Name:</mat-label>
+  <mat-label>Name:</mat-label>
     <input matInput [(ngModel)]="FoodItem.name">
   </mat-form-field>
 
   <mat-form-field color="primary" appearance="fill">
-    <mat-label for="title">Title:</mat-label>
+    <mat-label>Title:</mat-label>
     <input matInput [(ngModel)]="FoodItem.title">
   </mat-form-field>
 
   <mat-form-field color="primary" appearance="fill">
-    <mat-label for="type">Type:</mat-label>
+    <mat-label>Type:</mat-label>
     <input matInput [(ngModel)]="FoodItem.type">
   </mat-form-field>
 
   <mat-form-field color="primary" appearance="fill">
-    <mat-label for="author">Author:</mat-label>
+    <mat-label>Author:</mat-label>
     <input matInput [(ngModel)]="FoodItem.author">
   </mat-form-field>
 
   <mat-form-field color="primary" appearance="fill">
-    <mat-label for="imageLink">Image URL:</mat-label>
+    <mat-label>Image URL:</mat-label>
     <input matInput [(ngModel)]="FoodItem.imageLink">
   </mat-form-field>
 
   <mat-form-field color="primary" appearance="fill">
-    <mat-label for="body">Body:</mat-label>
+    <mat-label>Body:</mat-label>
     <textarea matInput [(ngModel)]="FoodItem.body"></textarea>
   </mat-form-field>
   <mat-form-field color="primary" appearance="fill">
-    <mat-label for="tempTags">Tags:</mat-label>
+    <mat-label>Tags:</mat-label>
     <input matInput [(ngModel)]="tempTags">
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="+(FoodItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() " >
