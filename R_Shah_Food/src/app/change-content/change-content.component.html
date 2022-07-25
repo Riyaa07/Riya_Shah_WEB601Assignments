@@ -1,35 +1,41 @@
-<label>
-  ID (for updating):
-  <input *ngIf="isShown" type="number" [(ngModel)]="FoodItem.id">
-</label>
-<label>
-    Name:
-    <input [(ngModel)]="FoodItem.name">
-  </label>
-  <label>
-    Title:
-    <input [(ngModel)]="FoodItem.title">
-  </label>
-  <label>
-    Type:
-    <input [(ngModel)]="FoodItem.type">
-  </label>
-  <label>
-    Author:
-    <input [(ngModel)]="FoodItem.author">
-  </label>
-  <label>
-    Image URL:
-    <input [(ngModel)]="FoodItem.imageLink">
-  </label>
-  <label>
-    Body:
-    <textarea [(ngModel)]="FoodItem.body"></textarea>
-  </label>
-  <label>
-    Tags:
-    <input [(ngModel)]="tempTags">
-  </label>
-  <button (click)="+(FoodItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() " >
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="id">ID (for updating)</mat-label>
+  <input matInput *ngIf="isShown" type="number" [(ngModel)]="FoodItem.id">
+</mat-form-field>
+
+<mat-form-field color="primary" appearance="fill">
+  <mat-label for="name">Name:</mat-label>
+    <input matInput [(ngModel)]="FoodItem.name">
+  </mat-form-field>
+
+  <mat-form-field color="primary" appearance="fill">
+    <mat-label for="title">Title:</mat-label>
+    <input matInput [(ngModel)]="FoodItem.title">
+  </mat-form-field>
+
+  <mat-form-field color="primary" appearance="fill">
+    <mat-label for="type">Type:</mat-label>
+    <input matInput [(ngModel)]="FoodItem.type">
+  </mat-form-field>
+
+  <mat-form-field color="primary" appearance="fill">
+    <mat-label for="author">Author:</mat-label>
+    <input matInput [(ngModel)]="FoodItem.author">
+  </mat-form-field>
+
+  <mat-form-field color="primary" appearance="fill">
+    <mat-label for="imageLink">Image URL:</mat-label>
+    <input matInput [(ngModel)]="FoodItem.imageLink">
+  </mat-form-field>
+
+  <mat-form-field color="primary" appearance="fill">
+    <mat-label for="body">Body:</mat-label>
+    <textarea matInput [(ngModel)]="FoodItem.body"></textarea>
+  </mat-form-field>
+  <mat-form-field color="primary" appearance="fill">
+    <mat-label for="tempTags">Tags:</mat-label>
+    <input matInput [(ngModel)]="tempTags">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="+(FoodItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() " >
     Add new content
   </button>

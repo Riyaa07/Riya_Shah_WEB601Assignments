@@ -17,7 +17,7 @@
   <h5>{{FoodItem?.author}}</h5>
   <h5 >{{FoodItem?.hashtags}}</h5>
 
-  <a routerLink="/list/">Back to the content list</a>
+  <a mat-raised-button color="primary" routerLink="/list/">Back to the content list</a>
   <br><br>
-  <a [routerLink]="['/updateContent', FoodItem?.id ?? 0]"> Update Content </a>
+  <a mat-raised-button color="primary" [routerLink]="['/updateContent', FoodItem?.id ?? 0]"> Update Content </a>
 </div>
